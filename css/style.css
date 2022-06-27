@@ -116,12 +116,12 @@ padding: 20px;
     color:#EED6D3; 
 
 }
-
+/*
 .grid-item:hover{
     transform: scale(1.15);
     transition: transform 0.5s;
 }
-
+*/
 .servicios__h1{
     display: flex;
     justify-content: center;
