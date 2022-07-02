@@ -27,12 +27,14 @@ html{
     width:110px;
     border-radius: 30%;
     background-color:#f7baca;
+    transition: transform 1.2s;
     
 } 
 
 .logo:hover{
-    transition: transform 0.5s ease-out;
+    
     transform: scale(1.20);
+
 }
 
 .header__navbar{
@@ -175,6 +177,7 @@ padding: 20px;
     justify-content: center;
     margin-bottom: 30px;
     align-items: center;
+    transition: transform 0.5s;
 }
 
 .grid-item p{
@@ -186,7 +189,7 @@ padding: 20px;
 }
 
 .grid-item:hover{
-    transition: transform 0.5s ease-out;
+    
     transform: scale(1.20);
    
 }
@@ -206,7 +209,7 @@ padding: 20px;
    border-radius: 2%;
    width:16vw;
    height: 24vh;
-    
+  
 }
 .img3{
     width: 18vw;
