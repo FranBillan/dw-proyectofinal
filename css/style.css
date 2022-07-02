@@ -20,13 +20,20 @@ html{
 .background{
     background-color: #EED6D3;
 }
-.logo{
-    margin-top: 14%;
-    margin-left:80px;
-    margin-right: 80px;
-    width:160px;
-}
 
+.logo{
+    margin-left:150px;
+    margin-right: 80px;
+    width:110px;
+    border-radius: 30%;
+    background-color:#f7baca;
+    
+} 
+
+.logo:hover{
+    transition: transform 0.5s ease-out;
+    transform: scale(1.20);
+}
 
 .header__navbar{
     display: flex;
@@ -64,9 +71,10 @@ html{
     padding-top: 20pt;
     padding-bottom: 11pt;
 }
+
 .menu_item:hover{
     background-color: #e28fa8; 
-
+    font-weight: bolder;
 }
 
 
@@ -92,8 +100,8 @@ a:hover{
 .section__slide{
     display: flex;
     justify-content: center;
-    background-color: #EED6D3;
-    
+    background-color: #f1e6e4;
+    border-radius: 5%;
     margin-top: 70px;
     margin-left: 10%;
     margin-right: 10%;
@@ -101,6 +109,21 @@ a:hover{
     height: fit-content;
     padding: 20px;
 }
+
+.news{
+    margin-top: 10pt;
+    font-family:Poppins, sans-serif;
+    text-align: center;
+    color: #d3859d;
+    font-weight: bolder ;
+}
+.sub-news{
+    font-family:Poppins, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #67595E;
+}
+
 
 .section__slide .container{
     margin: 4px;
@@ -420,9 +443,12 @@ padding: 20px;
         margin-top:57px;
     }
 
-    shadow-lg{
-        display:block;
+    .section__slide{
+    margin-left: 0px;
+    margin-right: 0px;
     }
+
+   
     .menu li{
         display: none;
     }
