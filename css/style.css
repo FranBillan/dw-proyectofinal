@@ -9,7 +9,6 @@
     box-sizing: border-box;
 }
 
-
 html{
    background-color: #EED6D3;
     font-family: Arial, Helvetica, sans-serif;
@@ -157,16 +156,17 @@ padding: 20px;
 
 }
 
-.grid-item{
+.grid-item-serv{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 30px;
     align-items: center;
     transition: transform 0.5s;
+    animation: fadeInRight 2s ease-in-out;
 }
 
-.grid-item p{
+.grid-item-serv p{
     padding: 10px;
     font-size: 20px;
     font-family: Poppins, sans-serif;
@@ -174,7 +174,7 @@ padding: 20px;
 
 }
 
-.grid-item:hover{
+.grid-item-serv:hover{
     
     transform: scale(1.20);
    
@@ -195,8 +195,17 @@ padding: 20px;
    border-radius: 2%;
    width:16vw;
    height: 24vh;
-  
+
 }
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(400px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 .img3{
     width: 18vw;
     height: 20vh;
@@ -374,22 +383,36 @@ section .section-title {
     margin-left: 0px;
     padding-bottom: 5%;
     align-items: center;
-    
+    animation: fadeInDown 0.8s ease-in both;
 }
-
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
 /*---- Fin Forms Principal----*/
 
 /* ----Tarjetas de Social---- */
+.box{
+    animation: fadeInRight 1s ease-in-out;
+}
 .containersocialbox{
     width: fit-content;
     height: fit-content;
     align-content: center;
     font-family: Poppins, sans-serif;
     color: rgb(255, 255, 255);
+    animation: fadeInRight 1.5s ease-in-out;
 }
 .social-box{
     display: flex;
     flex-direction: column;
+    
     
 }
 .social-box .box {
@@ -399,6 +422,7 @@ section .section-title {
     margin-bottom: 20pt;
     padding: 25px 10px;
     transition: all 0.5s ease-out;
+    
   
 }
 
@@ -431,6 +455,7 @@ section .section-title {
     justify-content: center;
     align-self: center;
     overflow:hidden;
+    
     
 }
 .contacto-list{
@@ -540,8 +565,17 @@ section .section-title {
 .title{
     background-color: #d898ac;
     padding:25pt;
+    animation: fadeInLeft 2.5s;
    
 }
+
+@keyframes fadeInLeft {
+	from {
+		
+		transform: translateX(-700px);
+	}
+}
+
 @media screen and (max-width: 1300px){
     .img__servicios{
         width:250px;
