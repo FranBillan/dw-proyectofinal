@@ -297,7 +297,7 @@ section .section-title {
    width:fit-content;
    height:fit-content;
    padding-left: 5pt;
-   
+   transform: none;
 }
 
 #footer .grid-item.mercadopago{
@@ -307,13 +307,18 @@ section .section-title {
 
 #footer .mp-img{
     width:130px;
+    transition:none;
 }
 #footer .cred-img{
     background-color:#f7baca;
     border-radius: 20%;
     padding-left: 4pt;
+    width:50px;
 }
 
+#footer .efec-img{
+    width:50px;
+}
 #footer .rrss-contenedor-footer{
     display: grid;
     grid-template-columns: repeat(2,70px);
@@ -453,8 +458,12 @@ section .section-title {
     background-color: #c57c8e;
     border-radius: 50%;
 }
+.ubicacion{
+    margin-left:3pt;
+}
 .contacto-img.ubi{
     width:30px;
+    
 }
 .rrss-box{
     display: flex;
@@ -519,14 +528,29 @@ section .section-title {
 
 /* Form de contacto con bootstrap */
 
-.suscribite {
+.newsletter {
+    display: flex;
     text-align: center;
     margin-bottom: 50pt;
     font-family: Poppins, sans-serif;
     font-weight: bolder;
+    justify-content: center;
 }
 
-
+.title{
+    background-color: #d898ac;
+    padding:25pt;
+   
+}
+@media screen and (max-width: 1300px){
+    .img__servicios{
+        width:250px;
+       }
+    
+       .img3 , .img6{
+        width: 300px;
+       }
+}
 
 @media screen and (max-width: 992px){
     .containersocialbox{
