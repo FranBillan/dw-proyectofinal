@@ -37,8 +37,21 @@ html{
     justify-content: center;
     background-color: #dfa1b4;  
     margin-top: 0%;
-    
+    animation: fadeInDown-navbar 0.7s ease-in both;
 }
+
+@keyframes fadeInDown-navbar {
+    from{
+     opacity:1;   
+     transform: translate3d(0,-100%,0)   
+
+    }to{
+        opacity:1;
+        transform: translate3d(0,0,0);
+    } 
+}
+
+
 .menu{
     display: flex;
     align-items: center;
@@ -53,6 +66,8 @@ html{
     font-family: Poppins, sans-serif;
     font-weight: bolder;
     justify-content: center;
+    transition: background-color 0.5s;
+    cursor: pointer;
 }
 
 .quienes-somos{
@@ -78,12 +93,6 @@ a:hover{
     text-decoration: none;
 }
 
-.section__main{
-    display:flex;
-    flex-direction: column;
-    margin-left: 7vw;
-    margin-top: 9vh;
-}
 
 .section__slide{
     display: flex;
@@ -92,10 +101,19 @@ a:hover{
     border-radius: 5%;
     margin-top: 70px;
     margin-left: 10%;
-    margin-right: 10%;
-    
+    margin-right: 10%; 
     height: fit-content;
     padding: 20px;
+    animation: fadeInLeft-slider 1.7s;
+    
+}
+@keyframes fadeInLeft-slider {
+    from{
+        opacity: 0;
+        transform: translate(-3700px);
+    }to{
+        opacity: 1;
+    }
 }
 
 .news{
@@ -563,7 +581,8 @@ section .section-title {
 }
 
 .title{
-    background-color: #d898ac;
+    border-radius: 10px;
+    background-color:#e4a2b5;
     padding:25pt;
     animation: fadeInLeft 2.5s;
    
@@ -574,6 +593,87 @@ section .section-title {
 		
 		transform: translateX(-700px);
 	}
+}
+
+.faq-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-container{
+    background-color: rgba(245, 230, 230, 0.63);
+    border-radius: 20px;   
+    animation: opacity-container 2.5s;
+}
+
+@keyframes opacity-container{
+    from{
+        opacity:0;
+    }to{
+        opacity:1;
+    }
+}
+
+.faq-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bolder;
+    color: #b895cf;
+}
+.faq-aclaracion{
+    font-family: Poppins, sans-serif;
+    font-size: 25px;
+}
+.faq-contactanos{
+    padding: 5pt;
+    height: fit-content;
+    background-color: #9eb8e71f;
+    border-radius: 10px;
+}
+
+.faq-pointer{
+    width:30px;
+    height: 30px;
+    margin-top: 10pt;
+}
+
+
+
+.faq-list-item{
+    text-align: center;
+}
+.faq-list-item-qtn{
+    font-weight: bolder;
+    font-size: 30pt;
+    color: #b598c9;
+    animation: fadeInRight-faq 1.5s;
+    
+}
+@keyframes fadeInRight-faq {
+    from{
+        opacity: 0;
+        transform: translateX(4700px);    
+    } 
+    to{
+        
+    }
+}
+
+.faq-list-item-awr{
+    font-weight: bold;
+    font-size: 13pt;
+    animation: fadeInLeft-awr 2s;
+
+}
+
+@keyframes fadeInLeft-awr{
+    from{
+        opacity:0;
+        transform: translateX(-7700px);  
+    }
+   to{
+    opacity:1;
+   }
 }
 
 @media screen and (max-width: 1300px){
