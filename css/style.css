@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@keyframes fadeInDown-navbar {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInLeft-slider {
+  from {
+    opacity: 0;
+    transform: translate(-3700px); }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(400px); }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-700px); } }
+
+@keyframes opacity-container {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes opacity-faq-pointer {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInLeft-awr {
+  from {
+    opacity: 0;
+    transform: translateX(-20700px); }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeInRight-faq {
+  from {
+    opacity: 0;
+    transform: translateX(4700px); } }
+
 /*---Backgrounds----*/
 /*---FIN Backgrounds----*/
 /*---FONTS---*/
@@ -39,14 +97,6 @@ html {
   margin-top: 0%;
   animation: fadeInDown-navbar 0.7s ease-in both; }
 
-@keyframes fadeInDown-navbar {
-  from {
-    opacity: 1;
-    transform: translate3d(0, -100%, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
 .menu {
   display: flex;
   align-items: center;
@@ -85,7 +135,7 @@ a {
 .section__slide {
   display: flex;
   justify-content: center;
-  background-color: rgba(245, 230, 230, 0.63);
+  background-color: #ffecec;
   border-radius: 5%;
   margin-top: 70px;
   margin-left: 10%;
@@ -93,13 +143,6 @@ a {
   height: fit-content;
   padding: 20px;
   animation: fadeInLeft-slider 1.7s; }
-
-@keyframes fadeInLeft-slider {
-  from {
-    opacity: 0;
-    transform: translate(-3700px); }
-  to {
-    opacity: 1; } }
 
 .news {
   margin-top: 10pt;
@@ -163,13 +206,6 @@ a {
   border-radius: 2%;
   width: 16vw;
   height: 24vh; }
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(400px); }
-  to {
-    opacity: 1; } }
 
 .img3, .img6 {
   width: 18vw;
@@ -245,13 +281,13 @@ section .section-title {
     grid-template-rows: repeat(2, 60px);
     width: fit-content;
     row-gap: 4pt; }
-  #footer .grid-item {
+  #footer .mercadopago, #footer .facebook {
     width: fit-content;
     height: fit-content;
     padding-left: 5pt;
     transform: none; }
-    #footer .grid-item.mercadopago {
-      grid-column: span 2; }
+  #footer .mercadopago {
+    grid-column: span 2; }
   #footer .mp-img {
     width: 130px;
     transition: none; }
@@ -267,11 +303,10 @@ section .section-title {
     grid-template-columns: repeat(2, 70px);
     grid-template-rows: repeat(2, 60px); }
   #footer .facebook {
-    width: 55px; }
-  #footer .grid-item.facebook {
+    width: 60px;
     grid-column: span 2;
-    width: 130px;
-    margin-top: 4pt; }
+    margin-top: 4pt;
+    padding-left: 3pt; }
   #footer .contacto-contenedor {
     color: #ffffff;
     display: flex;
@@ -301,7 +336,7 @@ section .section-title {
   height: fit-content;
   align-content: center;
   font-family: Poppins, sans serif;
-  color: rgba(245, 230, 230, 0.63);
+  color: #ffecec;
   animation: fadeInRight 1.5s ease-in-out; }
 
 .social-box {
@@ -396,14 +431,6 @@ section .section-title {
   align-items: center;
   animation: fadeInDown 0.8s ease-in both; }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
 .contacto__form.container {
   font-family: Poppins, sans serif; }
 
@@ -448,16 +475,12 @@ section .section-title {
   .title:hover {
     box-shadow: 0 0 15px #e94879; }
 
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-700px); } }
-
 /*----FIN CONTACTO----*/
 /*----QUIENES SOMOS----*/
 .qs-container {
   border-radius: 20px;
   box-shadow: 2px 2px 20px 2px #241c1e91;
-  background-color: rgba(245, 230, 230, 0.63); }
+  background-color: #ffecec; }
 
 .qs-main-img-container {
   border-radius: 20px;
@@ -474,15 +497,9 @@ section .section-title {
   align-items: center; }
 
 .faq-container {
-  background-color: rgba(245, 230, 230, 0.63);
+  background-color: #ffecec;
   border-radius: 20px;
   animation: opacity-container 2.5s; }
-
-@keyframes opacity-container {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
 
 .faq-title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -505,12 +522,6 @@ section .section-title {
   margin-top: 10pt;
   animation: opacity-faq-pointer 6s; }
 
-@keyframes opacity-faq-pointer {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
 .faq-list-item {
   text-align: center; }
 
@@ -520,23 +531,10 @@ section .section-title {
   color: #b895cf;
   animation: fadeInRight-faq 1.5s; }
 
-@keyframes fadeInRight-faq {
-  from {
-    opacity: 0;
-    transform: translateX(4700px); }
-  to { } }
-
 .faq-list-item-awr {
   font-weight: bold;
   font-size: 13pt;
   animation: fadeInLeft-awr 2s; }
-
-@keyframes fadeInLeft-awr {
-  from {
-    opacity: 0;
-    transform: translateX(-20700px); }
-  to {
-    opacity: 1; } }
 
 /*----FIN FAQ----*/
 @media screen and (max-width: 1300px) {
@@ -567,7 +565,7 @@ section .section-title {
   #footer .rrss-img {
     width: 50px; } }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .img__servicios {
     width: 130px;
     height: 120px; }
@@ -585,9 +583,6 @@ section .section-title {
   .header__navbar {
     margin-top: 0px;
     /*width: 100%; */
-    margin-left: 0px;
-    margin-right: 0px; }
-  .section__slide {
     margin-left: 0px;
     margin-right: 0px; }
   .menu li {
@@ -652,6 +647,11 @@ section .section-title {
     margin-bottom: 20pt; } }
 
 @media screen and (max-width: 575px) {
+  .menu li {
+    display: none; }
+  .section__slide {
+    margin-left: 0px;
+    margin-right: 0px; }
   #footer .rrss-contenedor-footer {
     justify-content: center; }
   #footer .mediospago-contenedor {

@@ -1,11 +1,14 @@
+@import './components/mediaqueries';
+@import './components/animaciones';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 
 /*---Backgrounds----*/
 $background-main:#EED6D3;
 $background-logo: #f7baca;
 $background-bar:#dfa1b4;
 $background-bar-hover:#e28fa8;
-$background-section:rgba(245, 230, 230, 0.63);
+$background-section:rgb(255, 236, 236);
 /*---FIN Backgrounds----*/
 /*---FONTS---*/
 $font: Poppins, sans serif;
@@ -62,17 +65,6 @@ html {
   animation: fadeInDown-navbar 0.7s ease-in both;
 }
 
-@keyframes fadeInDown-navbar {
-  from {
-    opacity: 1;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 .menu {
   display: flex;
@@ -133,16 +125,6 @@ a {
   animation: fadeInLeft-slider 1.7s;
 }
 
-@keyframes fadeInLeft-slider {
-  from {
-    opacity: 0;
-    transform: translate(-3700px);
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .news {
   margin-top: 10pt;
@@ -221,16 +203,6 @@ a {
   height: 24vh;
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(400px);
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .img3, .img6 {
   width: 18vw;
@@ -345,17 +317,17 @@ section .section-title {
     row-gap: 4pt;
   }
 
-  .grid-item {
+  %grid-item {
     width: fit-content;
     height: fit-content;
     padding-left: 5pt;
     transform: none;
-
-    &.mercadopago {
-      grid-column: span 2;
-    }
   }
 
+  .mercadopago {
+    @extend %grid-item;
+    grid-column: span 2;
+  }
   .mp-img {
     width: 130px;
     transition: none;
@@ -379,13 +351,11 @@ section .section-title {
   }
 
   .facebook {
-    width: 55px;
-  }
-
-  .grid-item.facebook {
+    @extend %grid-item;
+    width: 60px;
     grid-column: span 2;
-    width: 130px;
     margin-top: 4pt;
+    padding-left: 3pt;
   }
 
   .contacto-contenedor {
@@ -557,17 +527,7 @@ section .section-title {
   animation: fadeInDown 0.8s ease-in both;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 .contacto__form.container {
   font-family: $font;
@@ -625,11 +585,7 @@ section .section-title {
   }
 }
 
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-700px);
-  }
-}
+
 
 /*----FIN CONTACTO----*/
 
@@ -664,15 +620,6 @@ section .section-title {
   animation: opacity-container 2.5s;
 }
 
-@keyframes opacity-container {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .faq-title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -699,15 +646,6 @@ section .section-title {
   animation: opacity-faq-pointer 6s;
 }
 
-@keyframes opacity-faq-pointer {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 .faq-list-item {
   text-align: center;
@@ -720,35 +658,16 @@ section .section-title {
   animation: fadeInRight-faq 1.5s;
 }
 
-@keyframes fadeInRight-faq {
-  from {
-    opacity: 0;
-    transform: translateX(4700px);
-  }
-
-  to {}
-}
-
 .faq-list-item-awr {
   font-weight: bold;
   font-size: 13pt;
   animation: fadeInLeft-awr 2s;
 }
 
-@keyframes fadeInLeft-awr {
-  from {
-    opacity: 0;
-    transform: translateX(-20700px);
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 /*----FIN FAQ----*/
 
-@media screen and (max-width: 1300px) {
+@include breakpoint(xl) {
   .img__servicios {
     width: 250px;
   }
@@ -758,7 +677,7 @@ section .section-title {
   }
 }
 
-@media screen and (max-width: 992px) {
+@include breakpoint(lg) {
   .containersocialbox {
     margin-left: 0px;
   }
@@ -798,7 +717,7 @@ section .section-title {
   }
 }
 
-@media (max-width: 767px) {
+@include breakpoint(md) {
   .img__servicios {
     width: 130px;
     height: 120px;
@@ -817,18 +736,13 @@ section .section-title {
   }
 }
 
-@media screen and (max-width: 600px) {
+@include breakpoint(m-sm) {
   /* 320x832 */
 
   .header__navbar {
     margin-top: 0px;
 
     /*width: 100%; */
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .section__slide {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -926,7 +840,17 @@ section .section-title {
   }
 }
 
-@media screen and (max-width: 575px) {
+
+@include breakpoint(sm){
+  .menu li {
+      display: none;
+    }
+  
+  .section__slide{
+    margin-left: 0px;
+  margin-right: 0px;
+  }
+
   #footer {
     .rrss-contenedor-footer {
       justify-content: center;
