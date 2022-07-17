@@ -212,6 +212,8 @@ a {
   height: 20vh; }
 
 /*---FIN INDEX---*/
+/*--- PRODUCTOS --- */
+/*--- FIN PRODUCTOS --- */
 /* ---FOOTER NUEVO--------- */
 section {
   padding: 0px 0;
@@ -485,9 +487,25 @@ section .section-title {
 .qs-main-img-container {
   border-radius: 20px;
   background-color: #dbafba;
-  width: fit-content;
+  height: fit-content;
+  flex-basis: fit-content;
   padding-top: 20pt;
-  padding-bottom: 20pt; }
+  padding-bottom: 20pt;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.qs-card {
+  background-color: #dbafba;
+  height: fit-content;
+  flex-basis: fit-content; }
+
+.qs-title {
+  width: fit-content;
+  color: #dbafba; }
+
+.qs-p {
+  font-weight: bold;
+  font-size: 12pt; }
 
 /*----FIN QUIENES SOMOS---- */
 /*----FAQ----*/

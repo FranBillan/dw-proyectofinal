@@ -211,6 +211,16 @@ a {
 
 /*---FIN INDEX---*/
 
+/*--- PRODUCTOS --- */ 
+
+
+
+
+
+
+
+/*--- FIN PRODUCTOS --- */
+
 /* ---FOOTER NUEVO--------- */
 
 section {
@@ -600,11 +610,28 @@ section .section-title {
 .qs-main-img-container {
   border-radius: 20px;
   background-color: $marco;
-  width: fit-content;
+  height: fit-content;
+  flex-basis: fit-content;
   padding-top: 20pt;
   padding-bottom: 20pt;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.qs-card{
+  background-color: $marco;
+  height: fit-content;
+  flex-basis: fit-content;
+}
+.qs-title{
+  width: fit-content;
+  color:$marco;  
+
 }
 
+.qs-p{
+    font-weight: bold;
+    font-size: 12pt; 
+}
 /*----FIN QUIENES SOMOS---- */
 /*----FAQ----*/
 
@@ -663,7 +690,6 @@ section .section-title {
   font-size: 13pt;
   animation: fadeInLeft-awr 2s;
 }
-
 
 /*----FIN FAQ----*/
 
