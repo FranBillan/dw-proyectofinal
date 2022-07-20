@@ -14,3 +14,14 @@ $breakpoints: (
         }
     }
 }
+
+@mixin grids-productos{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt;
+  @include breakpoint(sm){
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10pt;
+  }
+}

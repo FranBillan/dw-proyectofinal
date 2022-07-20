@@ -1,37 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-@keyframes fadeInDown-navbar {
-  from {
-    opacity: 1;
-    transform: translate3d(0, -100%, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes fadeInLeft-slider {
-  from {
-    opacity: 0;
-    transform: translate(-3700px); }
-  to {
-    opacity: 1; } }
-
 @keyframes fadeInRight {
   from {
     opacity: 0;
     transform: translateX(400px); }
   to {
     opacity: 1; } }
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-700px); } }
 
 @keyframes opacity-container {
   from {
@@ -44,18 +17,6 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-
-@keyframes fadeInLeft-awr {
-  from {
-    opacity: 0;
-    transform: translateX(-20700px); }
-  to {
-    opacity: 1; } }
-
-@keyframes fadeInRight-faq {
-  from {
-    opacity: 0;
-    transform: translateX(4700px); } }
 
 /*---Backgrounds----*/
 /*---FIN Backgrounds----*/
@@ -95,7 +56,15 @@ html {
   justify-content: center;
   background-color: #dfa1b4;
   margin-top: 0%;
-  animation: fadeInDown-navbar 0.7s ease-in both; }
+  animation: fadeInDown 0.7s; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
 .menu {
   display: flex;
@@ -142,7 +111,11 @@ a {
   margin-right: 10%;
   height: fit-content;
   padding: 20px;
-  animation: fadeInLeft-slider 1.7s; }
+  animation: fadeInLeft 1.7s; }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-3700px); } }
 
 .news {
   margin-top: 10pt;
@@ -183,7 +156,14 @@ a {
   margin-bottom: 30px;
   align-items: center;
   transition: transform 0.5s;
-  animation: fadeInRight 2s ease-in-out; }
+  animation: fadeInRight 3s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(4000px); }
+  to {
+    opacity: 1; } }
   .grid-item-serv p {
     padding: 10px;
     font-size: 20px;
@@ -213,6 +193,115 @@ a {
 
 /*---FIN INDEX---*/
 /*--- PRODUCTOS --- */
+.prod-container {
+  background-color: #ffecec;
+  height: fit-content; }
+
+.prod-main-container {
+  animation: fadeInRight 2.3s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-1200px); }
+  to {
+    opacity: 1; } }
+
+.prod-section-title {
+  animation: fadeInLeft 1s; }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(200px); } }
+
+.prod-title {
+  position: relative;
+  white-space: nowrap;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #d4718f; }
+
+.title-border {
+  border-bottom: #d4718f59 dotted; }
+
+.prod-card {
+  background-color: #f0f0f0;
+  border-radius: 4%;
+  box-shadow: 4px 4px 7px 2px #69505691;
+  color: #d3859d;
+  cursor: pointer;
+  transition: transform 0.5s; }
+  .prod-card:hover {
+    transform: scale(1.1); }
+
+.prod-tortas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt; }
+  @media screen and (max-width: 575px) {
+    .prod-tortas-container {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 10pt; } }
+
+.prod-tartas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt; }
+  @media screen and (max-width: 575px) {
+    .prod-tartas-container {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 10pt; } }
+
+.prod-dye-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt; }
+  @media screen and (max-width: 575px) {
+    .prod-dye-container {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 10pt; } }
+
+.prod-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt; }
+  @media screen and (max-width: 575px) {
+    .prod-box-container {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 10pt; } }
+
+.prod_section-title {
+  font-weight: bolder;
+  color: #d3859d; }
+
+.prod-bar-item {
+  background-color: #f7baca;
+  color: #EED6D3;
+  font-weight: bold;
+  font-size: large;
+  white-space: nowrap;
+  animation: fadeInRight 2s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-800px); }
+  to {
+    opacity: 1; } }
+
+.prod-bar .btn {
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%; }
+  .prod-bar .btn .active {
+    background-color: #f7baca; }
+  .prod-bar .btn:hover {
+    background-color: #f7baca;
+    color: #44342f; }
+
 /*--- FIN PRODUCTOS --- */
 /* ---FOOTER NUEVO--------- */
 section {
@@ -331,15 +420,19 @@ section .section-title {
 /*----FIN FOOTER----*/
 /*----CONTACTO----*/
 /* ----Tarjetas de Social---- */
-.box {
-  animation: fadeInRight 1s ease-in-out; }
-
 .containersocialbox {
   height: fit-content;
   align-content: center;
   font-family: Poppins, sans serif;
   color: #ffecec;
-  animation: fadeInRight 1.5s ease-in-out; }
+  animation: fadeInRight 1.5s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(700px); }
+  to {
+    opacity: 1; } }
 
 .social-box {
   display: flex;
@@ -431,7 +524,15 @@ section .section-title {
   margin-left: 0px;
   padding-bottom: 5%;
   align-items: center;
-  animation: fadeInDown 0.8s ease-in both; }
+  animation: fadeInDown 1.2s; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
 .contacto__form.container {
   font-family: Poppins, sans serif; }
@@ -472,8 +573,12 @@ section .section-title {
   border-radius: 10px;
   background-color: #dfa1b4;
   padding: 25pt;
-  animation: fadeInLeft 2.5s;
+  animation: fadeInLeft 1.4s;
   transition: all 0.5s ease-out; }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-700px); } }
   .title:hover {
     box-shadow: 0 0 15px #e94879; }
 
@@ -482,7 +587,13 @@ section .section-title {
 .qs-container {
   border-radius: 20px;
   box-shadow: 2px 2px 20px 2px #241c1e91;
-  background-color: #ffecec; }
+  background-color: #ffecec;
+  height: fit-content;
+  animation: fadeInLeft 1.5s; }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(2700px); } }
 
 .qs-main-img-container {
   border-radius: 20px;
@@ -497,15 +608,39 @@ section .section-title {
 .qs-card {
   background-color: #dbafba;
   height: fit-content;
-  flex-basis: fit-content; }
+  flex-basis: fit-content;
+  animation: fadeInUp 2s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 700%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
 .qs-title {
   width: fit-content;
-  color: #dbafba; }
+  height: fit-content;
+  color: #dbafba;
+  animation: opacity 6s; }
+
+@keyframes opacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .qs-p {
   font-weight: bold;
-  font-size: 12pt; }
+  font-size: 12pt;
+  animation: opacity 6s; }
+
+@keyframes opacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*----FIN QUIENES SOMOS---- */
 /*----FAQ----*/
@@ -547,12 +682,23 @@ section .section-title {
   font-weight: bolder;
   font-size: 30pt;
   color: #b895cf;
-  animation: fadeInRight-faq 1.5s; }
+  animation: fadeInRight 1.5s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(4700px); }
+  to {
+    opacity: 1; } }
 
 .faq-list-item-awr {
   font-weight: bold;
   font-size: 13pt;
-  animation: fadeInLeft-awr 2s; }
+  animation: fadeInLeft 2s; }
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-20700px); } }
 
 /*----FIN FAQ----*/
 @media screen and (max-width: 1300px) {

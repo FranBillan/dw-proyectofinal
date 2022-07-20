@@ -1,9 +1,8 @@
-
-
-@keyframes fadeInDown-navbar {
+@mixin fadeInDown ($distancia , $tiempo){
+  @keyframes fadeInDown {
     from {
       opacity: 1;
-      transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, $distancia, 0);
     }
   
     to {
@@ -11,18 +10,36 @@
       transform: translate3d(0, 0, 0);
     }
   }
-
-
-@keyframes fadeInLeft-slider {
+  animation: fadeInDown $tiempo;
+}
+@mixin fadeInUp ($distancia , $tiempo){
+  @keyframes fadeInUp {
+    from {
+      opacity: 1;
+      transform: translate3d(0, $distancia, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  animation: fadeInUp $tiempo;
+}
+  
+@mixin fadeInRight ($distancia, $tiempo){
+  @keyframes fadeInRight {
     from {
       opacity: 0;
-      transform: translate(-3700px);
+      transform: translateX($distancia);
     }
   
     to {
       opacity: 1;
     }
-  }
+  } 
+  animation: fadeInRight $tiempo;
+}
   
 @keyframes fadeInRight {
     from {
@@ -35,23 +52,29 @@
     }
   } 
 
-@keyframes fadeInDown {
+
+@mixin fadeInLeft($distancia , $tiempo){
+  
+  @keyframes fadeInLeft {
+    from {
+      transform: translateX($distancia);
+    }
+  }  
+  animation:fadeInLeft $tiempo;
+}
+
+@mixin opacity ($tiempo) {
+  @keyframes opacity {
     from {
       opacity: 0;
-      transform: translate3d(0, -100%, 0);
     }
   
     to {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
     }
   }
-
-@keyframes fadeInLeft {
-    from {
-      transform: translateX(-700px);
-    }
-  }  
+ animation: opacity $tiempo;
+}
 
 @keyframes opacity-container {
     from {
@@ -74,21 +97,3 @@
     }
   }
 
-  @keyframes fadeInLeft-awr {
-  from {
-    opacity: 0;
-    transform: translateX(-20700px);
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight-faq {
-    from {
-      opacity: 0;
-      transform: translateX(4700px);
-    }
-  
-  }

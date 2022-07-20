@@ -62,7 +62,8 @@ html {
   justify-content: center;
   background-color: $background-bar;
   margin-top: 0%;
-  animation: fadeInDown-navbar 0.7s ease-in both;
+  @include fadeInDown(-100%, 0.7s);
+ 
 }
 
 
@@ -122,7 +123,8 @@ a {
   margin-right: 10%;
   height: fit-content;
   padding: 20px;
-  animation: fadeInLeft-slider 1.7s;
+  @include fadeInLeft(-3700px, 1.7s);
+ 
 }
 
 
@@ -172,7 +174,8 @@ a {
   margin-bottom: 30px;
   align-items: center;
   transition: transform 0.5s;
-  animation: fadeInRight 2s ease-in-out;
+  @include fadeInRight(4000px,3s);
+  
 
   p {
     padding: 10px;
@@ -212,10 +215,84 @@ a {
 /*---FIN INDEX---*/
 
 /*--- PRODUCTOS --- */ 
+.prod-container{
+  background-color: $background-section;
+  height:fit-content;
 
+}
+.prod-main-container{
+  @include fadeInRight (-1200px, 2.3s);
+}
+.prod-section-title{
+  @include fadeInLeft (200px, 1s);
+}
+.prod-title{
+  position: relative;
+  white-space: nowrap;
+  font-size: xx-large;
+  font-weight: bolder;
+  color:#d4718f;
+  
+}
+.title-border{
+  border-bottom: #d4718f59 dotted;
+}
+.prod-card{
+  background-color: rgb(240, 240, 240);
+  border-radius: 4%;
+  box-shadow: 4px 4px 7px 2px #69505691;
+  color:$font-important;
+  cursor:pointer;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 
+.prod-tortas-container{
+@include grids-productos;
+}
+.prod-tartas-container{
+  @include grids-productos;
+}
 
+.prod-dye-container{
+  @include grids-productos;
+}
 
+.prod-box-container{
+  @include grids-productos;
+}
+
+.prod_section-title{
+  font-weight: bolder;
+  color: $font-important;
+}
+
+.prod-bar-item{
+  background-color: $background-logo;
+  color:$background-main;
+  font-weight: bold;
+  font-size: large;
+  white-space: nowrap;
+  @include fadeInRight (-800px, 2s);
+}
+.prod-bar{
+  
+  .btn{
+    border-top-right-radius:0%;
+    border-bottom-right-radius:0%;
+    .active{
+      background-color: $background-logo;
+    }
+    &:hover{
+      background-color: $background-logo;
+      color:#44342f;
+    }
+    
+  }
+  
+}
 
 
 
@@ -405,16 +482,14 @@ section .section-title {
 
 /* ----Tarjetas de Social---- */
 
-.box {
-  animation: fadeInRight 1s ease-in-out;
-}
+
 
 .containersocialbox {
   height: fit-content;
   align-content: center;
   font-family: $font;
   color: $background-section;
-  animation: fadeInRight 1.5s ease-in-out;
+  @include fadeInRight(700px, 1.5s);
 }
 
 .social-box {
@@ -534,13 +609,14 @@ section .section-title {
   margin-left: 0px;
   padding-bottom: 5%;
   align-items: center;
-  animation: fadeInDown 0.8s ease-in both;
+ @include fadeInDown(-100%, 1.2s); 
 }
 
 
 
 .contacto__form.container {
   font-family: $font;
+  
 }
 
 .bg-info {
@@ -587,7 +663,7 @@ section .section-title {
   border-radius: 10px;
   background-color: $background-bar;
   padding: 25pt;
-  animation: fadeInLeft 2.5s;
+  @include fadeInLeft(-700px, 1.4s);
   transition: all 0.5s ease-out;
 
   &:hover {
@@ -605,6 +681,9 @@ section .section-title {
   border-radius: 20px;
   box-shadow: 2px 2px 20px 2px #241c1e91;
   background-color: $background-section;
+  height: fit-content;
+  @include fadeInLeft(2700px, 1.5s)
+ 
 }
 
 .qs-main-img-container {
@@ -621,16 +700,22 @@ section .section-title {
   background-color: $marco;
   height: fit-content;
   flex-basis: fit-content;
+  @include fadeInUp(700% , 2.0s);
+  
 }
 .qs-title{
   width: fit-content;
-  color:$marco;  
+  height: fit-content;
+  color:$marco;
+  @include opacity (6.0s);   
 
 }
 
 .qs-p{
     font-weight: bold;
     font-size: 12pt; 
+    @include opacity (6.0s); 
+    
 }
 /*----FIN QUIENES SOMOS---- */
 /*----FAQ----*/
@@ -682,13 +767,15 @@ section .section-title {
   font-weight: bolder;
   font-size: 30pt;
   color: $faq-titles;
-  animation: fadeInRight-faq 1.5s;
+  @include fadeInRight(4700px, 1.5s);
+
 }
 
 .faq-list-item-awr {
   font-weight: bold;
   font-size: 13pt;
-  animation: fadeInLeft-awr 2s;
+  @include fadeInLeft(-20700px, 2s);
+  
 }
 
 /*----FIN FAQ----*/
