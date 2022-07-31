@@ -10,7 +10,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  animation: fadeInDown $tiempo;
+  animation: fadeInDown $tiempo; 
 }
 @mixin fadeInUp ($distancia , $tiempo){
   @keyframes fadeInUp {
@@ -29,6 +29,7 @@
   
 @mixin fadeInRight ($distancia, $tiempo){
   @keyframes fadeInRight {
+   
     from {
       opacity: 0;
       transform: translateX($distancia);
@@ -74,7 +75,9 @@
     }
   }
  animation: opacity $tiempo;
+ 
 }
+
 
 @keyframes opacity-container {
     from {
