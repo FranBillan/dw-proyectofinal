@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BTCakes es una pastelería y panadería en CABA, Buenos Aires. Nuestros productos son elaborados en el día y de la mas alta calidad. En nuestro local brindamos servicios de cafetería y tomamos pedidos a domicilio.">
+    <meta name="keywords" content="pastelería, panadería, cafetería, comida, delivery, buenos aires, caba, tortas, pasteles, galletas, box dulce, desayunos, meriendas">
     <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
     <script src="/css/bootstrap/js/jquery.slim.min.js"></script>
     <script src="/css/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -12,19 +14,52 @@
 </head>
 <body class="background">
     <header id="top">
+        
         <nav class="header__navbar col-12 col-xl-12 col-md-12 col-sm-12 shadow">
+            <div class="d-xl-none d-lg-none" id="burgermenu">
+                <div class="burger">
+                  <span></span>
+                </div>
+                
+                <nav>
+                  <ul class="main">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                  </ul>
+                  
+                  <div class="about">
+                    <p>BTCakes Pastelería. Av Callao 644.</p>
+                  </div>
+                  
+                  <div class="social">
+                     <ul class="list-unstyled d-flex">
+                      <li class="pr-3 pl-3"> <a href="https://www.instagram.com"> <img src="../img/contacto/instagram-logo.png" class="rrss-img-burger" alt="instagram"> </a></li>
+                      <li class="pr-3 pl-3"> <a href="https://www.twitter.com"> <img src="../img/contacto/twitter-logo-1-1.png" class="rrss-img-burger" alt="twitter"> </a></li>
+                      <li class="pr-3 pl-3"> <a href="https://www.facebook.com"> <img src="../img/contacto/facebook-logo.png" class="rrss-img-burger" alt="facebook"> </a></li>
+                     </ul>
+                  </div>
+                  
+                 
+                </nav>
+                
+                <div class="overlay"></div>
+            
+              </div>
             <ul class="menu col-xl-12  col-md-12">
-                <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none">
+                <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                     <a href="../pages/productos.html">Productos</a>
                 </li>
-                <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none">
+                <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                     <a href="../pages/contacto.html">Contacto</a>
                 </li>
 
-                <li class="menu_item col-md-3 p-xl-5 quienes-somos d-xl-flex d-lg-flex d-md-none d-sm-none">
+                <li class="menu_item col-md-3 p-xl-5 quienes-somos d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                     <a href="../pages/quienes-somos.html">Quienes Somos</a>
                 </li>
-               <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none">
+               <li class="menu_item col-md-2 p-xl-5 p-lg-5 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                 <a href="../pages/faq.html">FAQ</a>
                </li>
                <span class="col-md-2 d-xl-flex d-lg-flex d-sm-flex d-flex justify-content-xl-end justify-content-md-center justify-content-sm-center justify-content-center mt-md-2 pb-md-2">
@@ -36,13 +71,48 @@
     <main>
 
         <section class="qs-main col-12 d-flex justify-content-center">
-        <div class="qs-container col-11 mt-5 mb-5 pt-5 pb-5 d-flex flex-column">
-        <h1 class="qs-title d-flex justify-content-center">¿Quiénes Somos?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum eleifend rhoncus. Pellentesque eget massa consectetur, volutpat sapien ac, faucibus arcu. Ut a ex libero. Sed id arcu vitae elit rhoncus blandit. Donec accumsan lacus sed magna condimentum, id vulputate nulla posuere. Nullam vitae est mi. Maecenas condimentum, magna eget accumsan rutrum, mauris nisi ultrices urna, eu hendrerit odio sem consectetur ipsum. Curabitur venenatis tristique leo sed lacinia. Proin bibendum malesuada dui quis fermentum.</p>
-       
-        <div class="qs-main-img-container align-items-start">
-            <img class="qs-main-img"src="../img/quienes-somos.jpg" alt="">
-        </div>    
+        <div class="qs-container col-11 mt-5 mb-5 pt-5 pb-5 d-flex flex-column align-items-center">
+        <h1 class="qs-title d-flex align-self-end  font-weight-bolder p-3">¿Quiénes Somos?</h1>
+        <div class="qs-central d-flex text-center col-12 col-md-12 flex-xl-row flex-sm-column flex-column align-items-xl-start align-items-sm-center "> 
+        <div class="qs-main-img-container align-items-start col-xl-7 col-sm-12 col-12">
+            <img class="qs-main-img col-12 pr-0 pl-0"src="../img/quienes-somos.jpg" alt="quienes-somos.jpg">
+        </div> 
+        <div class=" ml-xl-4 ml-lg-4 d-flex flex-column col-xl-5 col-sm-11 col-12">   
+        <p class="qs-p">Somos dos amigos apasionados por la pastelería y el buen café. Hace unos años empezamos con el proyecto
+            de BTCakes porque queríamos ofrecer un servicio de calidad en un lugar en el que la gente que nos visite se sienta como en casa,
+            desconecte de sus obligaciones habituales y disfrute de un rico café con nuestras tortas y productos artesanales.
+        </p>
+        <p class="qs-p">Nuestro local se encuentra en Av. Callao al 644 y contamos con servicio de cafetería para consumición en el lugar,
+          o podes pasar a retirar nuestros productos con atención de Lunes a Viernes de 9 a 20hs.
+        </p>
+         <div class="d-flex col-12 flex-column flex-xl-row flex-lg-row flex-md-row flex-sm-row">
+            <div class="qs-card col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-4 shadow-lg mr-2 rounded">
+    		    <div class="card profile-card-5">
+    		        <div class="card-img-block col-10 align-self-center pt-3">
+    		            <img class="card-img-top rounded-circle" src="../img/quienes-somos/img1.jpeg" alt="vicky_img">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class="card-title mt-4 font-weight-bolder">Vicky</h5>
+                    <p class="card-text font-weight-bold">Fundadora</p>
+                  </div>
+                </div>
+            </div>
+                <div class="qs-card col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-4 shadow-lg mr-2 rounded">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block col-10 align-self-center pt-3">
+                            <img class="card-img-top rounded-circle" src="../img/quienes-somos/img2.jpg" alt="franco_img">
+                        </div>
+                        <div class="card-body pt-0">
+                        <h5 class="card-title mt-4 font-weight-bolder">Franco</h5>
+                        <p class="card-text font-weight-bold">Pastelero</p>
+                    
+                      </div>
+                    </div>	
+    	</div>
+    </div>
+         </div>   
+        </div>
+    </div>
         
 </div>
 </section>
@@ -66,26 +136,26 @@
 				<div class="col-xl-3 col-lg-3 col-md-3 col-xs-12 col-sm-3">
 					<h5>Redes Sociales</h5>
 					<ul class="list-unstyled rrss-contenedor-footer">
-						<li class="grid-item"><a href="https://www.twitter.com"><img class="rrss-img pr-xl-2" src="../img/contacto/twitter-logo-1-1.png" alt=""></a></li>
-                        <li class="grid-item"><a href="https://www.instagram.com"><img class="rrss-img pr-xl-2" src="../img/contacto/instagram-logo.png" alt=""></a></li>
-                        <li class="grid-item facebook"><a href="https://www.facebook.com"><img class="rrss-img facebook pr-xl-2" src="../img/contacto/facebook-logo.png" alt=""></a></li>
+						<li class="grid-item"><a href="https://www.twitter.com"><img class="rrss-img pr-xl-2" src="../img/contacto/twitter-logo-1-1.png" alt="twitter"></a></li>
+                        <li class="grid-item"><a href="https://www.instagram.com"><img class="rrss-img pr-xl-2" src="../img/contacto/instagram-logo.png" alt="instagram"></a></li>
+                        <li class="grid-item facebook"><a href="https://www.facebook.com"><img class="rrss-img facebook pr-xl-2" src="../img/contacto/facebook-logo.png" alt="facebook"></a></li>
 					</ul>
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-3 col-xs-12 col-sm-3">
 					<h5>Medios de Pago</h5>
 					<ul class="list-unstyled mediospago-contenedor">
-                        <li class="grid-item"><img class="efec-img pr-xl-2" src="../img/footer/efectivo-icon.png" alt=""></li>
-                        <li class="grid-item"><img class="cred-img pr-xl-2" src="../img/footer/tarjeta-de-credito-icon.png" alt=""></li>
-                        <li class="grid-item mercadopago"><img class="mp-img pr-xl-2" src="../img/footer/mercado-pago-icon.png" alt=""></li>
+                        <li class="grid-item"><img class="efec-img pr-xl-2" src="../img/footer/efectivo-icon.png" alt="efec-img"></li>
+                        <li class="grid-item"><img class="cred-img pr-xl-2" src="../img/footer/tarjeta-de-credito-icon.png" alt="tarjetadecred-img"></li>
+                        <li class="grid-item mercadopago"><img class="mp-img pr-xl-2" src="../img/footer/mercado-pago-icon.png" alt="mercadopago-img"></li>
                         
 					</ul>
 				</div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-xs-12 col-sm-4 contacto-contenedor">
 					<h5>Contactanos</h5>
 					<ul class="contacto-list list-unstyled d-xl-flex flex-column">
-                        <li class="contacto-item"><img class="contacto-img pr-xl-2" src="../img/contacto/whatsapp-logo-1.png" alt=""><h4 class="info">+54 1134380305</h4></li>
-                        <li class="contacto-item mail"><img class="contacto-img pr-xl-2" src="../img/contacto/mail-logo.png" alt=""><h4 class="info">pedidos@btcakes.com.ar</h4></li>
-                        <li class="contacto-item ubicacion"><img class="ubi pr-xl-2" src="../img/contacto/ubi-logo.png" alt=""><h4 class="info">Av. Corrientes 644</h4></li>
+                        <li class="contacto-item"><img class="contacto-img pr-xl-2" src="../img/contacto/whatsapp-logo-1.png" alt="wpp-img"><h4 class="info">+54 1134380305</h4></li>
+                        <li class="contacto-item mail"><img class="contacto-img pr-xl-2" src="../img/contacto/mail-logo.png" alt="mail-img"><h4 class="info">pedidos@btcakes.com.ar</h4></li>
+                        <li class="contacto-item ubicacion"><img class="ubi pr-xl-2" src="../img/contacto/ubi-logo.png" alt="ubi-img"><h4 class="info">Av. Callao 644</h4></li>
                         
 					</ul>
 				</div>
@@ -102,6 +172,11 @@
 	</section>
 
     </footer>
-    
+    <script>$('.burger, .overlay').click(function(){
+        $('.burger').toggleClass('clicked');
+        $('.overlay').toggleClass('show');
+        $('nav').toggleClass('show');
+        $('body').toggleClass('overflow');
+      });</script>
 </body>
 </html>

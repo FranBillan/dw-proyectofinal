@@ -1,0 +1,27 @@
+$breakpoints: (
+  xs: 0,
+  sm: 575px,
+  m-sm: 600px,
+  md: 767px,
+  lg: 992px,
+  xl: 1300px
+);
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+            @content;
+        }
+    }
+}
+
+@mixin grids-productos{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 80pt;
+  @include breakpoint(sm){
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10pt;
+  }
+}
